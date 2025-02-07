@@ -13,35 +13,36 @@ body_registration ={
 body_confirmation={
 "trainer_token": TOKEN
 }
+body_create_pokemon={
+    "name": "Tarkov",
+    "photo_id": 2
+}
+response_create=requests.post(url=f'{URL}/pokemons',headers=HEADER,json=body_create_pokemon)
+print(response_create)
 
 body_create={
     "name": "RUST",
     "photo_id": 1
 }
-'''response_confirmation =requests.post(url=f'{URL}/trainers/confirm_email',headers=HEADER,json=body_confirmation)
-print(response_confirmation.text)'''
+response_confirmation =requests.post(url=f'{URL}/trainers/confirm_email',headers=HEADER,json=body_confirmation)
+print(response_confirmation.text)
 
-'''response_create=requests.post(url=f'{URL}/pokemons',headers=HEADER,json=body_create)
-print(response_create.text)'''
+response_create=requests.post(url=f'{URL}/pokemons',headers=HEADER,json=body_create)
+print(response_create.text)
 
 body_change={
-    "pokemon_id":"224704",
-    "name": "Tarkov",
+    "pokemon_id":"225288",
+    "name": "Tar",
     "photo_id": 2
 }
 
-'''response_create=requests.put(url=f'{URL}/pokemons',headers=HEADER,json=body_change)
-print(response_create)'''
+response_create=requests.put(url=f'{URL}/pokemons',headers=HEADER,json=body_change)
+print(response_create)
 
 body_Pokeball={
-    "pokemon_id": "225018"
+    "pokemon_id": "225289"
 }
 response_create=requests.post(url=f'{URL}/trainers/add_pokeball',headers=HEADER,json=body_Pokeball)
 print(response_create)
 
-body_create_pokemon={
-    "name": "Tarkov",
-    "photo_id": 1
-}
-'''response_create=requests.post(url=f'{URL}/pokemons',headers=HEADER,json=body_create_pokemon)
-print(response_create)'''
+
